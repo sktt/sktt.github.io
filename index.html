@@ -3,11 +3,67 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>sktt - mazylol demo</title>
+    <title>sktt</title>
     <meta name="description" content="rx-pixi-generator powered mazylol(s) 🐿">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      body {
+        font-family: monospace;
+      }
+      .overlay {
+        position: absolute;
+        background-color: rgba(0,0,0,0.8);
+        color: #E7DBB2;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 360px;
+        padding: 16px;
+        border-radius: 2px;
+        border: 1px solid #A3BB2E;
+      }
+      hr {
+        border-color: #A3BB2E;
+      }
+      p {
+        margin: 8px;
+
+      }
+      h1 {
+        color: #F0A932;
+        margin: 8px;
+      }
+      a{
+        color: #F0A932;
+        text-decoration: none;
+      }
+      a:hover{
+        text-decoration: underline;
+      }
+    </style>
   </head>
   <body>
+    <div class="overlay">
+      <h1>sktt</h1>
+      <p><i>Johannes Winer, freelancing software engineer, <a
+          href="mailto:johannes.wikner@gmail.com">mail</a>, <a
+          href="https://github.com/sktt">code</a></i>
+        <hr />
+      <p>
+        I am a software engineer, based in Berlin, Germany. I am interested in
+        asynchronous and reactive programming, algorithms, data visualisation
+        and modelling. Most of my work is done with JavaScript.
+      </p>
+      <p>
+        If you like the background, <a
+          href="https://sktt.github.io/?scale=1&nooverlay">try this</a>.
+      </p>
+    </div>
+    <script>
+      if (~window.location.href.indexOf('nooverlay')) {
+        document.querySelector('.overlay').remove();
+      }
+    </script>
     <script src="main.js"></script>
     <noscript>gtfo</noscript>
   </body>
